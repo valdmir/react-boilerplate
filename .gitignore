@@ -1,0 +1,6 @@
+node_modules
+assets/static
+webpack-assets.json
+*.log
+*.log.*
+*.DS_Store

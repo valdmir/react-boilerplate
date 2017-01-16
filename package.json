@@ -1,0 +1,110 @@
+{
+  "name": "React-Boilerplate",
+  "version": "0.1.0",
+  "description": "React Boilerplate",
+  "main": "server.js",
+  "scripts": {
+    "lint": "eslint ./; true",
+    "prod": "better-npm-run prod",
+    "dev": "npm-run-all --parallel express pack",
+    "express": "better-npm-run express",
+    "build": "better-npm-run build",
+    "pack": "better-npm-run webpack"
+  },
+  "betterScripts": {
+    "prod": {
+      "command": "node server",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    "build": {
+      "command": "node webpack/build.js",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    "express": {
+      "command": "node server",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "webpack": {
+      "command": "babel-node webpack/webpack-dev-server",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://meidy88@bitbucket.org/verysmartdonkey/donkey-web-analytics.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/verysmartdonkey/donkey-web-analytics#readme",
+  "dependencies": {
+    "babel-polyfill": "^6.6.1",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-register": "^6.18.0",
+    "bootstrap-sass": "^3.3.7",
+    "brace": "^0.8.0",
+    "browser-request": "^0.3.3",
+    "classnames": "^2.2.4",
+    "clean-webpack-plugin": "^0.1.8",
+    "cli-color": "^1.1.0",
+    "cookie-parser": "^1.4.1",
+    "css-loader": "^0.23.1",
+    "express": "^4.13.4",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "isomorphic-fetch": "^2.2.1",
+    "node-sass": "^3.5.3",
+    "qs": "^6.1.0",
+    "react": "^15.4.2",
+    "react-redux": "^4.4.5",
+    "react-resizable": "^1.3.3",
+    "react-router": "^2.3.0",
+    "react-router-redux": "^4.0.0",
+    "react-tooltip": "^2.0.2",
+    "redux": "^3.5.1",
+    "redux-async-connect": "^1.0.0-rc4",
+    "redux-form": "^4.2.2",
+    "redux-immutable-state-invariant": "^1.2.3",
+    "redux-logger": "^2.6.1",
+    "redux-thunk": "^2.0.1",
+    "request": "^2.72.0",
+    "webpack": "^1.13.0",
+    "webpack-isomorphic-tools": "^2.2.48"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-module-resolver": "^2.3.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-runtime": "^6.6.1",
+    "better-npm-run": "0.0.8",
+    "eslint": "^3.10.2",
+    "eslint-import-resolver-babel-module": "^2.2.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-react": "^6.7.1",
+    "eslint-watch": "^2.1.14",
+    "file-loader": "^0.9.0",
+    "force-case-sensitivity-webpack-plugin": "^0.1.1",
+    "less-loader": "^2.2.3",
+    "lru-memoize": "^1.0.1",
+    "npm-run-all": "^3.1.1",
+    "redux-devtools": "^3.1.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.14",
+    "webpack-dev-middleware": "^1.5.1",
+    "webpack-hot-middleware": "^2.9.1"
+  }
+}
