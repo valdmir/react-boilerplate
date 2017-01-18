@@ -10,7 +10,7 @@ var port = 4009;
 //SERVED SERVER URL CONFIG
 
 var serverOptions = {
-    contentBase: config.WEB,
+    contentBase: "http://localhost:4001",
     // contentBase: 'http://' + host + ':' + port,
     quiet: true,
     noInfo: true,
