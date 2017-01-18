@@ -49,17 +49,10 @@ function startPage(initialState) {
 // This is fired every time the server side receives a request
 
 function handleRender(req, res) {
-    if(req.cookies.is_logged_in=='true'){
-        const initialState = {};
-        const store = configureStore(initialState);
-        const finalState = store.getState();
-        res.send(startPage(finalState));
-    }
-    else{
-        res.redirect(url_config.WEB);
-        // res.redirect(req.protocol + "://" + req.headers.origin);
-    }
-    return;
+  const initialState = {};
+  const store = configureStore(initialState);
+  const finalState = store.getState();
+  res.send(startPage(finalState));
 
 }
 
