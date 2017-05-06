@@ -11,7 +11,7 @@ var mainJs = assetCollection.javascript.donkey;
 var mainCss = assetCollection.styles.donkey;
 var mainJsLine,mainCssLine;
 if (__DEVELOPMENT__){
-    mainJsLine = assetCollection.javascript.donkey? `<script src="http://localhost:4009/dist/donkey.js"></script>` : '';
+    mainJsLine = assetCollection.javascript.donkey? `<script src="http://localhost:4009/dist/boilerplate.js"></script>` : '';
     mainCssLine = assetCollection.styles.donkey ? `<link rel="stylesheet" type="text/css" href="${mainCss}" />` : '';
 }
 else {

@@ -18,11 +18,10 @@ var webpack_isomorphic_tools_plugin = new Webpack_isomorphic_tools_plugin(requir
 
 var host = 'localhost';
 var port = 4009;
-console.log(path.resolve(__dirname, '../client/styles'));
 module.exports = {
     devtool: 'inline-source-map',
     entry: {
-        'donkey': [
+        'boilerplate': [
             'webpack-hot-middleware/client?path=http://' + host + ':' + port + '/__webpack_hmr&reload=true',
             './client/app.js'
         ]
