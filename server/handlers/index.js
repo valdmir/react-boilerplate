@@ -5,14 +5,14 @@ var router = express.Router();
 import configureStore from '../../client/configureStore';
 import url_config from '../../config/config';
 
-
+console.log(__webpackIsomorphicTools__.assets());
 var assetCollection = __webpackIsomorphicTools__.assets();
-var mainJs = assetCollection.javascript.donkey;
-var mainCss = assetCollection.styles.donkey;
+var mainJs = assetCollection.javascript.boilerplate;
+var mainCss = assetCollection.styles.boilerplate;
 var mainJsLine,mainCssLine;
 if (__DEVELOPMENT__){
-    mainJsLine = assetCollection.javascript.donkey? `<script src="http://localhost:4009/dist/boilerplate.js"></script>` : '';
-    mainCssLine = assetCollection.styles.donkey ? `<link rel="stylesheet" type="text/css" href="${mainCss}" />` : '';
+    mainJsLine = assetCollection.javascript.boilerplate? `<script src="http://localhost:4009/dist/boilerplate.js"></script>` : '';
+    mainCssLine = assetCollection.styles.boilerplate ? `<link rel="stylesheet" type="text/css" href="${mainCss}" />` : '';
 }
 else {
     mainJsLine = `<script src="${mainJs}"></script>`;

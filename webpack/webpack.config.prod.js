@@ -56,13 +56,12 @@ module.exports = {
     noInfo:false,
     progress:true,
     plugins: [
-        new webpack.optimize.OccurenceOrderPlugin(),
 
 
         new CleanPlugin([assetsPath], { root: projectRootPath }),
 
         // css files from the extract-text-plugin loader
-        new ExtractTextPlugin('[name]-[chunkhash].css', {allChunks: true}),
+        new ExtractTextPlugin({filename:'[name]-[chunkhash].css', allChunks: true}),
         new webpack.DefinePlugin(url_config.client_config),
         new webpack.DefinePlugin({
             __CLIENT__: true,
@@ -71,7 +70,7 @@ module.exports = {
             __DEVTOOLS__: false
         }),
         // new webpack.IgnorePlugin(/\.\/dev/, /\/config$/),
-        new webpack.optimize.UglifyJsPlugin({
+        new webpack.UglifyJsPlugin({
             sourceMap: false,
             mangle: false,
             // mangle: {
