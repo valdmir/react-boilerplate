@@ -12,7 +12,6 @@ import { Provider } from 'react-redux';
 
 import configureStore from '../client/configureStore';
 
-var handlers = require('./handlers');
 
 const app = new express();
 const port = process.env.PORT || 4001;
@@ -22,12 +21,14 @@ app.use(express.static('assets'));
 //COKKIE SETUP
 var cookieParser = require('cookie-parser');
 app.use(cookieParser());
-
-
-app.get('/', handlers.index);
-for (var key in handlers) {
-    app.use('/' + key, handlers[key]);
-}
+// for react initialization
+let reactPage=require('./react-page');
+var handlers = require('./handlers');
+console.log(reactPage+"react page");
+app.get('/', reactPage);
+// for (var key in handlers) {
+//     app.use('/api/' + key, handlers[key]);
+// }
 
 
 app.use(function(req, res, next) {
