@@ -4,7 +4,7 @@ var create_client_config = require('./utils');
 var default_config = {
     "NODE_ENV": "development",
     "environment": "DEVELOPMENT ON LOCAL",
-
+    "app_name":"boilerplate",
 };
 
 

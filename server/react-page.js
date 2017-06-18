@@ -8,9 +8,10 @@ var assetCollection = __webpackIsomorphicTools__.assets();
 var mainJs = assetCollection.javascript.boilerplate;
 var mainCss = assetCollection.styles.boilerplate;
 var mainJsLine,mainCssLine;
+console.log(url_config)
 if (__DEVELOPMENT__){
-    mainJsLine = assetCollection.javascript.boilerplate? `<script src="http://localhost:4009/dist/boilerplate.js"></script>` : '';
-    mainCssLine = assetCollection.styles.boilerplate ? `<link rel="stylesheet" type="text/css" href="${mainCss}" />` : '';
+    mainJsLine = assetCollection.javascript.boilerplate? `<script src="http://localhost:4009/dist/`+url_config.app_name+`.js"></script>` : '';
+    mainCssLine = assetCollection.styles[url_config.app_name] ? `<link rel="stylesheet" type="text/css" href="${mainCss}" />` : '';
 }
 else {
     mainJsLine = `<script src="${mainJs}"></script>`;
@@ -43,7 +44,6 @@ function startPage(initialState) {
 // This is fired every time the server side receives a request
 
 function handleRender(req, res) {
-  console.log("handleRender")
   const initialState = {};
   const store = configureStore(initialState);
   const finalState = store.getState();

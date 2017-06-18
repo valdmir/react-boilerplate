@@ -23,12 +23,11 @@ var webpack_isomorphic_tools_plugin =
 
 //3
 var CleanPlugin = require('clean-webpack-plugin');
-
-module.exports = {
+let configuration={
     // devtool: 'inline-source-map',
     devtool: 'source-map',
     entry: {
-            'donkey': [
+            [url_config.app_name]: [
                 './client/app.js',
         ]
     },
@@ -91,3 +90,4 @@ module.exports = {
         webpack_isomorphic_tools_plugin
     ],
 };
+module.exports =configuration;

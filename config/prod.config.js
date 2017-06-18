@@ -4,7 +4,7 @@ var create_client_config = require('./utils');
 var default_config = {
     "NODE_ENV": "production",
     "environment": "PRODUCTION",
-
+    "app_name":"boilerplate",
 };
 
 

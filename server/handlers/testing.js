@@ -4,8 +4,6 @@ var router = express.Router();
 
 import configureStore from '../../client/configureStore';
 import url_config from '../../config/config';
-
-console.log(__webpackIsomorphicTools__.assets());
 var assetCollection = __webpackIsomorphicTools__.assets();
 var mainJs = assetCollection.javascript.boilerplate;
 var mainCss = assetCollection.styles.boilerplate;

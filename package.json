@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint ./; true",
     "prod": "better-npm-run prod",
-    "dev": "npm-run-all --parallel express pack",
+    "start": "npm-run-all --parallel express pack",
     "express": "better-npm-run express",
     "build": "better-npm-run build",
     "pack": "better-npm-run webpack"

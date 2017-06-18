@@ -24,7 +24,6 @@ app.use(cookieParser());
 // for react initialization
 let reactPage=require('./react-page');
 var handlers = require('./handlers');
-console.log(reactPage+"react page");
 app.get('/', reactPage);
 // for (var key in handlers) {
 //     app.use('/api/' + key, handlers[key]);
