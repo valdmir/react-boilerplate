@@ -4,3 +4,4 @@ webpack-assets.json
 *.log
 *.log.*
 *.DS_Store
+package-lock.json

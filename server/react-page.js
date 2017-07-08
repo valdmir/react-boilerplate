@@ -8,9 +8,9 @@ var assetCollection = __webpackIsomorphicTools__.assets();
 var mainJs = assetCollection.javascript.boilerplate;
 var mainCss = assetCollection.styles.boilerplate;
 var mainJsLine,mainCssLine;
-console.log(url_config)
+console.log(assetCollection.javascript['boilerplate'])
 if (__DEVELOPMENT__){
-    mainJsLine = assetCollection.javascript.boilerplate? `<script src="http://localhost:4009/dist/`+url_config.app_name+`.js"></script>` : '';
+    mainJsLine = assetCollection.javascript[url_config.app_name]? `<script src="http://localhost:4009/dist/`+url_config.app_name+`.js"></script>` : '';
     mainCssLine = assetCollection.styles[url_config.app_name] ? `<link rel="stylesheet" type="text/css" href="${mainCss}" />` : '';
 }
 else {

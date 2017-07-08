@@ -5,9 +5,11 @@ class SimplePage extends React.Component{
     super(props,context);
   }
   render(){
-    return(<div>
+    return(
+      <div>
       testing
-    </div>);
+      </div>
+    );
   }
 }
 export default SimplePage;
